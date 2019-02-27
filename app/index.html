@@ -3,8 +3,6 @@
 <head>
  <meta name="viewport" content="width=device-width, initial-scale=1">
  <link rel="stylesheet" type="text/css" href="css/styles.css">
- <script type="text/javascript" src="js/jquery-1.10.2.min.js"></script>
- <script type="text/javascript" src="js/scroll.js"></script>
 </style>
 </head>
 
@@ -33,9 +31,21 @@
     <aside>This is an aside for some things</aside>
     <footer>Here is the footer</footer>
   </div>
-  <script src="js/skrollr.min.js"></script>
   <script>
-      skrollr.init();
+  let anchorlinks = document.querySelectorAll('a[href^="#"]')
+
+  for (let item of anchorlinks) {
+      item.addEventListener('click', (e)=> {
+          let hashval = item.getAttribute('href')
+          let target = document.querySelector(hashval)
+          target.scrollIntoView({
+              behavior: 'smooth',
+              block: 'start'
+          })
+          history.pushState(null, null, hashval)
+          e.preventDefault()
+      })
+  }
   </script>
 </body>
 </html>

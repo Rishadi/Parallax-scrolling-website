@@ -29,16 +29,17 @@ header nav a {
   background-repeat: no-repeat; }
 
 .intro {
-  background-image: url("../images/sec1.jpg"); }
-
+  background-image: url("../images/sec1.jpg");
+}
 .service {
-  background-color: rgba(117, 190, 218, 0.5); }
-
+  background-color: rgba(117, 190, 218, 0.5);
+}
 .product {
-  background-color: #ffff80; }
-
+  background-color: #ffff80;
+ }
 .news {
-  background-color: #11ffeeff; }
-
+  background-color: #11ffeeff;
+}
 .contact {
-  background-color: rgba(50, 84, 64, 0.75); }
+  background-color: rgba(50, 84, 64, 0.75);
+}
